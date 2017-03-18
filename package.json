@@ -1,0 +1,24 @@
+{
+  "name": "bookshelf-postgres-test",
+  "version": "1.0.0",
+  "description": "A repo to play around with bookshelf and postgres",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdlawrence/bookshelf-postgres-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdlawrence/bookshelf-postgres-test/issues"
+  },
+  "homepage": "https://github.com/jdlawrence/bookshelf-postgres-test#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
