@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/jdlawrence/bookshelf-postgres-test#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "bookshelf": "^0.10.3",
+    "express": "^4.15.2",
+    "knex": "^0.12.8",
+    "pg": "^6.1.5"
   }
 }
