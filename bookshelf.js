@@ -1,7 +1,6 @@
 // var connectionString = 'postgres://localhost:5432/postgres';
 var Promise = require('bluebird');
 
-
 var knex = require('knex')({
   client: 'pg',
   connection: {
@@ -24,10 +23,19 @@ var User = bookshelf.Model.extend({
   tableName: 'dummy_users'
 });
 
-User.where('users', '').fetch({}).then(function(user) {
-  console.log('user', user);
+// Equivalent to "SELECT * FROM dummy_users"
+User.where({}).fetch({}).then(function(user) {
+  console.log('user', user.get('users'));
 }).catch(function(err) {
   console.error('err', err);
+});
+
+// Equivalent to "INSERT INTO dummy_users (users) VALUES ('aNewUser');
+new User({users: 'aNewUser'}).save().then(function(model) {
+  // ...
+  console.log('model', model);
+}).catch(function(err) {
+  console.log('err', err);
 });
 
 module.exports = knex;
